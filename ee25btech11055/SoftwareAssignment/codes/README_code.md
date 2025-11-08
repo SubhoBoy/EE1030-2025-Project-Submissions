@@ -6,15 +6,24 @@ gcc --version
 If gcc is up to date, proceed to compile the project:
 1. On UNIX based systems:
 ```bash
-gcc main.c matrix.c image.c svd.c -lm -o comp
+gcc c_main/main.c c_libs/matrix.c c_libs/image.c c_libs/svd.c -lm -o comp
 ```
 2. On Windows:
 ```bash
-gcc main.c matrix.c image.c svd.c -lm -o comp.exe
+gcc c_main/main.c c_libs/matrix.c c_libs/image.c c_libs/svd.c -lm -o comp.exe
 ```
 
 The format for running the program is:
 ```bash
 ./comp input.img output.img k
 ```
-where _k_ is the number of top singular values to keep 
+where _k_ is the number of top singular values to keep.
+
+To run the Python code for comparison with linalg libraries and plotting, first install the following Python libraries:
+```
+numpy Pillow matplotlib
+```
+Then, the Python code is self-contained:
+```bash
+python svdplot.py
+```

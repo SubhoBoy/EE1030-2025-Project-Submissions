@@ -11,6 +11,7 @@ The idea is to perform rudimentary compression on an image by representing it as
 - Efficient colour handling
 - Flexible I/O formats
 - Modular, memory managed code
+- Comparison with standard libraries and error plots
 
 ## Project Structure
 ```
